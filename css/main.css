@@ -368,6 +368,10 @@ body {
     cursor: pointer;
 }
 
+.more-wrap{
+    display: inline-block;
+}
+
 .more {
     display: flex;
     gap: 10px;
