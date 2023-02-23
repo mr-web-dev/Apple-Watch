@@ -31,15 +31,91 @@ body {
     margin: 0 auto;
 }
 
-.visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+/* come start */
+
+.come {
+    min-height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
 }
+
+.come__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.come__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    display: grid;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.come__logo:hover .come__title strong{
+    border-bottom: 7px solid #000;
+    transition: 0.4s;
+}
+
+.come__logo:hover .come__title span{
+    border-bottom: 7px solid #EA625C;
+    transition: 0.4s;
+}
+
+.come__logo__img-box {
+    max-width: 109px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.come__logo__img {
+    width: 100%;
+    display: flex;
+}
+
+.come__text-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.come__title {
+    width: 100%;
+    max-width: 285px;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 126px;
+    color: #000;
+}
+
+.come__title span{
+    color: #EA625C;
+}
+
+.come__img-box {
+    width: 100%;
+    max-width: 444px;
+    display: flex;
+}
+
+.come__img {
+    width: 100%;
+    display: flex;
+}
+
+/* come end */
 
 /* br start */
 
@@ -58,7 +134,8 @@ body {
     top: 0;
     width: 100%;
     position: fixed;
-    background-color: rgb(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .nav__inner {
@@ -201,6 +278,8 @@ body {
     font-weight: 400;
     font-size: 15px;
     line-height: 150%;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
 }
 
 .nav__link {
@@ -210,17 +289,19 @@ body {
 }
 
 .nav__item:hover {
-    opacity: 0.5;
+    border-bottom: 3px solid #333333;
     transition: 0.4s;
 }
 
 .help {
-    padding: 3px;
+    padding-left: 9px;
+    padding-bottom: 3px;
     border: none;
     background: none;
     border-bottom: 1px solid #333333;
     margin-left: 40px;
     outline: none;
+    transition: 0.4s;
 }
 
 .help::placeholder {
@@ -290,7 +371,7 @@ body {
 }
 
 .btn:hover {
-    opacity: 0.8;
+    background-color: #C9514C;
 }
 
 .btn:active {
