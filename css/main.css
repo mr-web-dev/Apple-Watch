@@ -260,11 +260,11 @@ body {
 .nav__logo {
     display: flex;
     margin-right: auto;
+    transition: 0.4s;
 }
 
 .nav__logo:hover {
     transform: scale(1.1);
-    transition: 0.4s;
     rotate: -5deg;
 }
 
@@ -280,6 +280,7 @@ body {
     line-height: 150%;
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
+    transition: 0.4s;
 }
 
 .nav__link {
@@ -290,10 +291,10 @@ body {
 
 .nav__item:hover {
     border-bottom: 3px solid #333333;
-    transition: 0.4s;
 }
 
 .help {
+    padding-top: 3px;
     padding-left: 9px;
     padding-bottom: 3px;
     border: none;
@@ -441,11 +442,11 @@ body {
     background: #DDDDDD;
     border: none;
     outline: none;
+    transition: 0.4s;
 }
 
 .box:hover {
     scale: 1.5;
-    transition: 0.4s;
     cursor: pointer;
 }
 
