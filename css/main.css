@@ -59,14 +59,21 @@ body {
     transition: 0.4s;
 }
 
+.come__title strong{
+    transition: 0.4s;
+}
+
 .come__logo:hover .come__title strong{
     border-bottom: 7px solid #000;
+}
+
+.come__title span{
     transition: 0.4s;
+
 }
 
 .come__logo:hover .come__title span{
     border-bottom: 7px solid #EA625C;
-    transition: 0.4s;
 }
 
 .come__logo__img-box {
