@@ -10,9 +10,14 @@ html {
     scroll-behavior: smooth;
 }
 
-*:focus {
+:focus {
     outline: 5px dotted red !important;
     outline-offset: 3px;
+}
+
+::selection{
+    color: #fff;
+    background-color: #000;
 }
 
 body {
@@ -34,10 +39,13 @@ body {
 /* come start */
 
 .come {
+    width: 100%;
     min-height: 100vh;
     padding-top: 50px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: #fff;
 }
 
@@ -50,30 +58,12 @@ body {
 }
 
 .come__logo {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    display: grid;
+    transition: 0.4s;
     text-decoration: none;
-    transition: 0.4s;
-}
-
-.come__title strong{
-    transition: 0.4s;
-}
-
-.come__logo:hover .come__title strong{
-    border-bottom: 7px solid #000;
-}
-
-.come__title span{
-    transition: 0.4s;
-
-}
-
-.come__logo:hover .come__title span{
-    border-bottom: 7px solid #EA625C;
 }
 
 .come__logo__img-box {
@@ -105,10 +95,26 @@ body {
     font-weight: 700;
     line-height: 126px;
     color: #000;
+    transition: 0.4s all ease;
 }
 
-.come__title span{
+.come__str{
+    border-bottom: 0 dotted transparent;
+    transition: 0.4s;
+}
+
+.come__content{
     color: #EA625C;
+    border-bottom: 0 dotted transparent;
+    transition: 0.4s;
+}
+
+.come__logo:hover .come__str{
+    border-bottom: 7px solid #000;
+}
+
+.come__logo:hover .come__content{
+    border-bottom: 7px solid #EA625C;
 }
 
 .come__img-box {
@@ -124,6 +130,8 @@ body {
 
 /* come end */
 
+
+
 /* br start */
 
 .br {
@@ -131,7 +139,7 @@ body {
     margin-bottom: 100px;
 }
 
-/* br eng */
+/* br end */
 
 
 
@@ -143,6 +151,7 @@ body {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
 }
 
 .nav__inner {
@@ -187,6 +196,7 @@ body {
     width: 100%;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
 }
 
 .mobile-slider {
@@ -200,6 +210,7 @@ body {
     width: 256px;
     background-color: #222324;
     box-shadow: -5px 0 8px rgba(0, 0, 0, 0.2);
+    z-index: 3000;
 }
 
 .mobile-slider-top {
@@ -378,6 +389,11 @@ body {
     white-space: nowrap;
 }
 
+.btn::selection{
+    background-color: #fff;
+    color: #C9514C;
+}
+
 .btn:hover {
     background-color: #C9514C;
 }
@@ -399,10 +415,6 @@ body {
 }
 
 /* hero end */
-
-
-
-/* header end */
 
 
 
@@ -503,6 +515,8 @@ body {
 
 /* comfort end */
 
+
+
 /* info start */
 
 .info {
@@ -544,22 +558,35 @@ body {
 }
 
 .info__img-box {
+    max-width: 400px;
     display: flex;
+    overflow: hidden;
 }
 
 .info__img {
     width: 100%;
+    transition: 1s;
+}
+
+.info__img-box:hover .info__img{
+    scale: 1.5;
 }
 
 /* info end */
 
+
+
 /* control start */
 
 .control {
-    padding-top: 240px;
-    padding-bottom: 239px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: url(../img/control.jpg);
     background-repeat: no-repeat;
+    background-position: center top;
     background-attachment: fixed;
     background-size: cover;
     margin-top: 70px;
@@ -594,6 +621,12 @@ body {
 .control__btn {
     padding: 12px 46px;
     margin-top: 30px;
+}
+
+.control__text::selection,
+.control__title::selection{
+    background-color: #fff;
+    color: #000;
 }
 
 /* control end */
