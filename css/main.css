@@ -513,6 +513,11 @@ body {
     color: #EA625C;
 }
 
+.more__text::selection{
+    background-color: #C9514C;
+    color: #fff;
+}
+
 /* comfort end */
 
 
